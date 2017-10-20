@@ -1,18 +1,16 @@
-//generating colors for reindeer
-const colorGenerator = function* () {
-    const colors = ["Blue", "Red", "Orange", "Purple", "Goldenrod", "Aquamarine", "Olive", "Azure", "Fuchsia", "Chocolate", "Salmon", "Amaranth"];
-    let counter = 0;
-
-    while (counter < colors.length) {
-        yield currentColor = colors[counter];
-        counter += 1
-    }
-}
-
-
 //generating reindeer object with color
 const coloredReindeerBuilder = function () {
     const reindeer = ["Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"];
+    //generator function for the colors
+    const colorGenerator = function* () {
+        const colors = ["Blue", "Red", "Orange", "Purple", "Goldenrod", "Aquamarine", "Olive", "Azure", "Fuchsia", "Chocolate", "Salmon", "Amaranth"];
+        let counter = 0;
+    
+        while (counter < colors.length) {
+            yield currentColor = colors[counter];
+            counter += 1
+        }
+    }
     const nextColor = colorGenerator(); //calling the color generator
     const coloredReindeer = []; 
     
