@@ -6,4 +6,4 @@ for (let i = 0; i < coloredReindeerBuilder().length; i++) {
     reindeerEl.innerHTML += `
         <section style="color: ${currentReindeerColor.color}">${currentReindeerColor.name}</section>
     `
-}
+} 
